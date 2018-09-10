@@ -1,0 +1,28 @@
+<h1> Bites N Nites </h1>
+<h1> Welcome new Customer to SignUp Page </h1>
+
+<form method ='post'>
+<div class='form-group'>
+<label for='exampleInputUsername'>
+User Name: 
+</label>
+<input class="form-control" type="text" name="userName" placeholder="Enter User Name" id="userName" value="{{userName}}" pattern = "^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Provide a username with the use of letters, numbers and special characters like _ or - or ." required>
+</div>
+
+<div class='form-group'>
+<label for='examplePasswordInput'>
+Password
+</label>
+<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Enter Password" value="{{userPassword}}" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="There should an UpperCase, LowerCase and a number" required>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+{{#if error }}
+<div class="form-group">
+<div class="alert alert-danger">
+{{ error }}
+</div>
+</div>
+{{/if}}
+</form>

@@ -1,0 +1,49 @@
+<h1> Bites N Nites </h1>
+<h1> Welcome new Owner to SignUp Page </h1>
+
+<form method ='post'>
+<div class='form-group'>
+<label for='exampleInputFullname'>
+Full Name:
+</label>
+<input class="form-control" type="text" name="fullName" placeholder="Enter Full Name" id="fullName" value="{{fullName}}" title="Dow Jones" required>
+</div>
+
+<div class='form-group'>
+<label for='exampleInputUsername'>
+User Name: 
+</label>
+<input class="form-control" type="text" name="userName" placeholder="Enter User Name" id="userName" value="{{userName}}" pattern = "^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Provide a username with the use of letters, numbers and special characters like _ or - or ." required>
+</div>
+
+<div class='form-group'>
+<label for='exampleInputEmailid'>
+Email ID:
+</label>
+<input class="form-control" type="email" name="emailId" placeholder="Enter Email ID" id="emailId" value="{{emailId}}" title="abc@example.com" required>
+</div>
+
+<div class='form-group'>
+<label for='exampleInputPhoneNumber'>
+Phone Number:
+</label>
+<input class="form-control" type="tel" name="phoneNumber" placeholder="Enter Phone Number" id="phoneNumber" value="{{phoneNumber}}" pattern="^\d{3}[\-]\d{3}[\-]\d{4}" title = "123-456-7890" required>
+</div>
+
+<div class='form-group'>
+<label for='examplePasswordInput'>
+Password
+</label>
+<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Enter Password" value="{{userPassword}}" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="There should an UpperCase, LowerCase and a number" required>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+{{#if error }}
+<div class="form-group">
+<div class="alert alert-danger">
+{{ error }}
+</div>
+</div>
+{{/if}}
+</form>

@@ -1,0 +1,87 @@
+<h1> Bites N Nites </h1>
+
+<button><a href="/logout">logout</a></button>
+{{#if message }}
+      <div class="form-group">
+        <div class="alert alert-info">
+          {{ message }}
+        </div>
+      </div>
+      {{/if}}
+
+<p>Here's your Restaurant</p>
+<form method ='post'>
+    <div class="row">
+  <div class="col-md-12 col-md-12">
+    <div class="thumbnail" style="background-image: url({{restaurantImage}}); opacity:0.8; ">
+        <div class="caption">
+        <h1 class="text-center" style="color: black; font-size: 20mm"><strong>{{restaurantName}} </strong></h1>
+        <br>
+        <br>
+        </div>
+    </div>
+  </div>
+    </div>
+
+<div class='form-group'>
+        <label for='exampleInputFullname'>
+            Restaurant name:
+        </label>
+        <input class="form-control" type="text" name="name" id="name" value="{{restaurantName}}" title="Dow Jones" required>
+    </div>
+
+<div class='form-group'>
+        <label for='exampleInputFullname'>
+            Restaurant Image URL:
+        </label>
+        <input class="form-control" type="url" name="imageurl" id="imageurl" value="{{restaurantImage}}" pattern="https?://.+" required>
+    </div>
+
+
+<div class='form-group'>
+        <label for='exampleInputFullname'>
+            Price:
+        </label>
+        <input class="form-control" type="text" name="price" id="price" value="{{restaurantPrice}}" required>
+    </div>
+<div class='form-group'>
+        <label for='exampleInputFullname'>
+            Phone Number:
+        </label>
+        <input class="form-control" type="text" name="number" id="number" value="{{restaurantnumber}}" required>
+    </div>
+    <div class='form-group'>
+        <label for='exampleInputFullname'>
+            Happy Hours:
+        </label>
+        <input class="form-control" type="time" name="happyhours" id="happyhours" value="{{restaurantHappyHours}}">
+    </div>
+
+<!--<div class='form-group'>
+        <label for='exampleInputFullname'>
+            categories:
+        </label>-->
+       <!-- <input class="form-control" type="text" name="categories" id="categories" value="{{restaurantCategories}}">-->
+       <!-- {{#each restaurantCategories}}
+        <input class="form-control" type="text" name="categories" id="categories" value="{{this.title}} {{this.alias}}"> 
+    {{/each}}-->
+
+
+
+
+<button type="submit" class="btn btn-primary">Submit</button>
+<button class="btn btn-primary"><a href={{restaurantid}}>Delete Restaurant</a></button>
+
+{{#if error }}
+      <div class="form-group">
+        <div class="alert alert-danger">
+          {{ error }}
+        </div>
+      </div>
+      {{/if}}
+
+      
+
+      
+      
+</form>

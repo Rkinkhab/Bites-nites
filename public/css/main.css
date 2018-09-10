@@ -1,0 +1,72 @@
+body {
+  background: #E8E5E0;
+  background-image: url("https://www.disruptordaily.com/wp-content/uploads/2017/04/Artificial-Intelligence-Companies-Disrupting-The-Food-Industry.jpg"); 
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 15pt;
+  }
+  main {
+  max-width: 75%;
+  margin: auto;
+  }
+  header {
+  border-bottom: 1px solid #080000;
+  }
+  h1 {
+  color: #F56907;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  border: 8px solid #5F9E1E;
+  }
+  h2 {
+  color: #4B08F0;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  h3 {
+  color: #4EB2DC;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  label {
+  color: #000A04;
+  }
+  p {
+  font-size: 2rem;
+  line-height: 2;
+  
+  }
+  textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  }
+  footer
+  {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:70px; /* Height of the footer */
+  border-bottom: 1px solid #100101; }
+  form
+  {
+  background-color: rgba(244, 215, 132, 0.29);
+  } 
+  
+  .btn-primary {
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  
+  }

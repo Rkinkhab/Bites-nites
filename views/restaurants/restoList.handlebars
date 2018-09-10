@@ -1,0 +1,98 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Our First Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--link rel="stylesheet" href="/public/css/main.css"-->
+</head>
+<body>
+  <button><a href="/logout">logout</a></button>
+           <h1 class="text-center"><strong>Bites N' Nites</strong></h1>
+        
+   <br>
+   <br>
+   <form id="sort-by-rating">
+     <button type="submit"  class="btn btn-default">Sort by Rating</button>     
+     </form>
+     <form id="sort-by-high-price">
+       <button type="submit" class="btn btn-default">Sort by high price</button>     
+     </form>
+      <form id="sort-by-medium-price">
+       <button type="submit" class="btn btn-default">Sort by moderate price</button>     
+     </form>
+     <form id="sort-by-low-price">
+       <button type="submit" class="btn btn-default">Sort by low price</button>     
+     </form>
+   <form class="form-inline">
+     
+    <div class="form-group">
+      <label for="filters">Apply Filters:</label>
+      <label for="enterCity">City</label>
+      <select class="form-control">
+        <option>Hoboken, NJ</option>
+        <option>Manhatten, NYC</option>
+      </select>
+      <label for="enterCuisine">Cuisine</label>
+        <select class="form-control">
+        <option>Asian:Indian</option>
+        <option>Asian:Chinese</option>
+        <option>Asian:Thai</option>
+        <option>Asian:Japanese</option>
+        <option>Greek</option>
+        <option>French</option>
+      </select>
+      <label for="enterPrice">Price</label>
+        <select class="form-control">
+        <option>$$$</option>
+        <option>$$</option>
+        <option>$</option>
+        <option>Low to High</option>
+        <option>High to Low</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Apply Filters</button>
+   </form>
+    <br>
+    <br>
+
+  <div id="restaurants">
+    {{#each restaurantList}}
+    <!--ul class="list-inline" style="display:inline-block;"-->
+    <!--div width=110 heigth=100>
+      <a href={{#concat this.id}}>Hiii</a> 
+    {{/concat}}-->
+    <!--li>{{this.name}} <image width=90 height=90 src= {{this.image_url}} ></image></li-->
+    <!--<a href={{#concat this.id}}>Hiii</a> 
+    {{/concat}}
+    <!--li class="list-inline-item"-->
+    <div data-role="page" id="pageone">
+  <div  data-role="main" class="ui-content">
+    
+    <ul data-role="listview" data-inset="true">
+      <li>
+        <a href="/restaurants/{{this.id}}">
+        <img src={{this.image_url}} style="height: 250px; width : 33%">
+        <h2>{{this.name}}</h2>
+        </a>
+     <br>
+      </li>
+    </ul>
+  </div>
+</div> 
+     
+    <!--/li--> 
+           {{/each}}
+  <!--/ul-->
+  </div>   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/public/js/basic_ajax_with_jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<h1> Bites N Nites </h1>
+<h1> Welcome Owner after signup Restaurant </h1>
+
+<button><a href="/logout">logout</a></button>
+{{#if title }}
+      <div class="alert alert-danger">
+  <strong>Oops!</strong> {{title}}
+</div>
+      {{/if}}
+
+
+<form method ='post'>
+    <div class='form-group'>
+        <label for='exampleInputFullname'>
+            Enter Restaurant ID if any:
+        </label>
+        <input class="form-control" type="text" name="restaurantid" placeholder="Enter Restaurant ID" id="restaurantid" value="{{restaurantid}}" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</a></button>
+
+
+
+    {{#if error }}
+      <div class="form-group">
+        <div class="alert alert-danger">
+          {{ error }}
+        </div>
+      </div>
+      {{/if}}
+      
+      
+</form>

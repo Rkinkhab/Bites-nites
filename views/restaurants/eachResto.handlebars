@@ -1,0 +1,119 @@
+   <br>
+<form method ='post'>
+
+<button><a href="/logout">logout</a></button>
+<div class="row">
+  <div class="col-md-12 col-md-12">
+    <div class="thumbnail" style="background-image: url({{restaurantImage}}); opacity:0.8; ">
+        <!--img src="{{restaurantImage}}"" alt="source image"-->
+        <!--img src="{{restaurantImage}}" alt="Norway" width="1000" height="300"-->
+  
+       <div class="caption">
+        <h1 class="text-center" style="color: black; font-size: 20mm"><strong>{{restaurantName}} </strong></h1>
+        <br>
+        <br>
+        <p style="text-align:left; color: black">
+                <strong> Rating:
+                    {{restaurantRating}}
+                    <br>
+                
+                <span style="float:right; color:black;">
+                        Price:  {{restaurantPrice}} 
+                    </strong>
+                </span>
+        </p>
+        <p style="text-align:left; color:black;">
+                <strong>Location:  
+                    <address style="color: black">
+                        {{restaurantLocation}} 
+                    </address>
+                    
+            </p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<!--div>
+    <label for='categories'>
+           Category: 
+    </label>
+    {{#each restaurantCategories}}
+        <p class="text-uppercase">{{this.title}}</p>
+    {{/each}}
+</div-->
+
+    
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1"><strong>Categories</strong></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+        {{#each restaurantCategories}}
+            <div class="panel-body">
+                <p class="text-uppercase">
+                    {{this.title}}
+                </p>
+            </div>
+        {{/each}}
+    </div>
+  </div>
+</div>
+
+<br>
+<div>
+    <label for='interested'>
+            Finding this Intersting Come Let's Check Out Some More Details --> 
+    </label>
+    <a href="{{restaurantLink}}" class="btn btn-primary" role="button">Let's Go</a>
+</div>
+<br>
+<br>
+
+<div>
+    <label for='exampleInputUsername'>
+            Reviews: 
+    </label>
+    
+    {{#each reviews}}
+        <!--div width=110 heigth=90>
+            <div >{{this.user_name}}</div>   
+            <div>{{this.post}} </div>
+        </div-->
+
+        <dl class="dl-horizontal">
+        
+        <dt><div >{{this.user_name}}</div></dt>
+               <dd><div>{{this.post}} {{logger}}</div></dd>
+        <dd><div> {{logger}}</div></dd>
+        </dl>
+
+    {{/each}}
+
+<br>
+<br>
+<div class='form-group'>
+        <label for='exampleInputUsername'>
+            Go ahead tell us about your Experience: 
+        </label>
+        <br>
+<textarea class="form-control" rows="4" name="review"></textarea>
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
+
+    {{#if error }}
+      <div class="form-group">
+        <div class="alert alert-danger">
+          {{ error }}
+        </div>
+      </div>
+      {{/if}}
+
+</form>
+
